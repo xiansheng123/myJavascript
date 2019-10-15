@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<form>
+    <section id="section1" oninput='document.querySelector("#result").value=parseInt( document.querySelector("#income1").value)+
+    parseInt(document.querySelector("#income2").value)+
+parseInt(  document.querySelector("#income3").value)+
+parseInt(  document.querySelector("#income4").value)'>
+        <input type="text" id="income1" />
+        <input type="text" id="income2" />
+        <input type="text" id="income3" />
+        <input type="text" id="income4" />
+        
+    </section>
+    <output id="result" for="income1 income2 income3"></output>
+</form>
+
+<!--no releated to "for"-->
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)+parseInt(c.value)">0
+    <input type="range" id="a" value="50">100
+    +<input type="number" id="b" value="50">
+    ---<input type="number" id="c" value="50">
+    =<output name="x" for="a b"></output>
+</form>
+    
+
+</html>
+<!--
+显式的联系：将标签与特定元素的id关联起来
+<label for="SSN">Social Security Number:</label>
+<input type="text" name="SocSecNum" id="SSN" />
+
+
+隐式的联系：将表单元素包裹在lable元素内。
+<label>用户名: <input type="text" name="user-name" /></label>
+ -->
