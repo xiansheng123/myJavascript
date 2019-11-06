@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("input, select").on("input", function () {
+                $("pre").prepend("\nOn input. | " + this.tagName);
+            }).on("change", function () {
+                $("pre").prepend("\nOn change | " + this.tagName);
+            }).on("focus", function () {
+                $("pre").prepend("\nOn focus | " + this.tagName);
+            }).on("blur", function () {
+                $("pre").prepend("\nOn blur | " + this.tagName);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button   onclick="document.querySelector(`pre`).innerText =''">claer</button>
+   
+    <input type="text" />
+    <select>
+        <option>Alice</option>
+        <option>Bob</option>
+        <option>Carol</option>
+        <option>Dave</option>
+        <option>Emma</option>
+    </select>
+    <pre></pre>
+</body>
+
+
+</html>
