@@ -1,2 +1,3 @@
 # myJavascript
-demo javascript
+open localhost 8000 node .\server.js
+
